@@ -1,0 +1,24 @@
+{
+    "settings": {
+        "number_of_shards": 2,
+        "number_of_replicas": 1
+    },
+    "mappings": {
+        "dynamic": "true",
+        "_source": {
+            "enabled": "true"
+        },
+        "properties": {
+            "tweet": {
+                "type": "text"
+            },
+            "vector_tweet": {
+                "type": "dense_vector",
+                "dims": 512
+            },
+            "etiqueta": {
+                "type": "text"
+            }
+        }
+    }
+}
